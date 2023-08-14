@@ -14,3 +14,9 @@ AS last_update_mode_value,
  MODE() WITHIN GROUP (ORDER BY fulltext) AS 				
 fulltext_mode_value				
 FROM film;				
+--Rating statistics
+SELECT rating,			
+COUNT(film_id) AS number_of_films			
+FROM film			
+GROUP BY 1			
+ORDER BY number_of_films DESC;			
