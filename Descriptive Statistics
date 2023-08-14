@@ -1,0 +1,16 @@
+--Gathering descriptive statistics of the Rockbuster database
+SELECT MODE() WITHIN GROUP (ORDER BY title) AS 				
+title_mode_value,				
+ MODE() WITHIN GROUP (ORDER BY description) AS 				
+description_mode_value,				
+ MODE() WITHIN GROUP (ORDER BY release_year) 				
+AS release_year_mode_value,				
+ MODE() WITHIN GROUP (ORDER BY rating) AS 				
+rating_mode_value,				
+ MODE() WITHIN GROUP (ORDER BY 				
+special_features) AS special_features_mode_value,				
+ MODE() WITHIN GROUP (ORDER BY last_update) 				
+AS last_update_mode_value,				
+ MODE() WITHIN GROUP (ORDER BY fulltext) AS 				
+fulltext_mode_value				
+FROM film;				
